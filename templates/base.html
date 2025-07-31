@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Mohamed Shaahid - Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="nav-left">
+            <nav>
+                <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+                <a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a>
+                <a href="/projects" class="{% if request.path == '/projects' %}active{% endif %}">Portfolio</a>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="https://github.com/shaahid-dev" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@shaahidtech" target="_blank">YouTube</a>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

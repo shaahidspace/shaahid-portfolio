@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Mohamed Shaahid{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-left">
+        <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Mohamed Shaahid" />
+    </div>
+    <div class="hero-right">
+        <h1>I’m Mohamed Shaahid</h1>
+        <h2>Aspiring Developer & Tech Enthusiast</h2>
+        <p>I’m a 14-year-old passionate about coding, creating apps with Python, and building digital tools to solve real-world problems.</p>
+        <a href="/about" class="btn">Get in touch</a>
+    </div>
+</section>
+{% endblock %}
