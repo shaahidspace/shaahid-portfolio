@@ -1,3 +1,4 @@
+/* Default (Light) Theme */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,12 +6,28 @@ body {
     background-color: #f2f2f2;
     color: #333;
 }
+
 header {
     background-color: #004080;
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
+
+#theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 6px 12px;
+    background-color: white;
+    color: #004080;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 nav a {
     color: white;
     margin: 0 10px;
@@ -18,13 +35,16 @@ nav a {
     padding: 6px 12px;
     border-radius: 4px;
 }
+
 nav a.active, nav a:hover {
     background-color: #0066cc;
     text-decoration: underline;
 }
+
 main {
     padding: 20px;
 }
+
 footer {
     background-color: #ccc;
     text-align: center;
@@ -33,16 +53,74 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 section {
     margin-bottom: 50px;
 }
+
 section ul li {
     margin-bottom: 10px;
 }
+
 section ul li a {
     text-decoration: none;
     color: #004080;
 }
+
 section ul li a:hover {
     text-decoration: underline;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #121212;
+    color: #f2f2f2;
+}
+
+body.dark-mode header {
+    background-color: #1e1e2f;
+    color: #f2f2f2;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+body.dark-mode nav a {
+    color: #f2f2f2;
+}
+
+body.dark-mode nav a.active,
+body.dark-mode nav a:hover {
+    background-color: #444;
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+body.dark-mode section ul li a {
+    color: #99ccff;
+}
+/* Glassmorphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+/* Improve readability in dark mode */
+body.dark-mode .glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+body {
+    background: url('/static/img/blur-bg.jpg') center/cover no-repeat fixed;
 }

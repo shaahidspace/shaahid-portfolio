@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Mohamed Shaahid</h1>
+        <button id="theme-toggle">🌙 Dark Mode</button>
         <nav>
             <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
             <a href="/projects" class="{% if request.path == '/projects' %}active{% endif %}">Projects</a>
@@ -20,11 +21,35 @@
     </main>
     <footer>
         <p>Connect with me:
-            <a href="https://github.com/shaahid-dev" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com/in/shaahid" target="_blank">LinkedIn</a> |
-            <a href="https://www.youtube.com/@shaahidtech" target="_blank">YouTube</a>
+            <a href="https://github.com/shaahidspace" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/shaahidm" target="_blank">LinkedIn</a> |
+            <a href="https://www.youtube.com/@passioncuber2731" target="_blank">YouTube</a>
         </p>
         <p>&copy; 2025 Mohamed Shaahid</p>
     </footer>
+<script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+        toggleBtn.textContent = savedTheme === "dark-mode" ? "🌞 Light Mode" : "🌙 Dark Mode";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light-mode");
+            toggleBtn.textContent = "🌙 Dark Mode";
+        } else {
+            body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark-mode");
+            toggleBtn.textContent = "🌞 Light Mode";
+        }
+    });
+</script>
+
 </body>
 </html>
