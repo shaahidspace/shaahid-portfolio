@@ -124,3 +124,40 @@ body.dark-mode .glass {
 body {
     background: url('/static/img/blur-bg.jpg') center/cover no-repeat fixed;
 }
+.qr-generator {
+    background-color: #2e2e2e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #111;
+    color: #f5f5f5;
+    max-width: 500px;
+    margin: auto;
+}
+
+.qr-generator h2 {
+    color: #f5f5f5;
+}
+
+.qr-generator input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+.qr-generator button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.qr-generator button:hover {
+    background-color: #005f99;
+}
