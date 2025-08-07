@@ -121,43 +121,89 @@ body.dark-mode .glass {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-body {
-    background: url('/static/img/blur-bg.jpg') center/cover no-repeat fixed;
-}
+/*body {
+    background: url('/static/images/blurimage.jpg') center/cover no-repeat fixed;
+}*/
+/* ===== QR Code Generator Section (Light Mode by Default) ===== */
 .qr-generator {
-    background-color: #2e2e2e;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #111;
-    color: #f5f5f5;
-    max-width: 500px;
-    margin: auto;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
 
 .qr-generator h2 {
-    color: #f5f5f5;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.qr-generator p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.qr-generator form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .qr-generator input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #888;
-    border-radius: 4px;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
 }
 
 .qr-generator button {
-    background-color: #007acc;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #0077cc;
     color: white;
-    padding: 12px 24px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 .qr-generator button:hover {
-    background-color: #005f99;
+    background-color: #005fa3;
 }
+
+/* ===== Dark Mode Styles ===== */
+body.dark-mode .qr-generator {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    color: #eee;
+}
+
+body.dark-mode .qr-generator h2 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .qr-generator p {
+    color: #ccc;
+}
+
+body.dark-mode .qr-generator input[type="text"] {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+body.dark-mode .qr-generator button {
+    background-color: #00aaff;
+    color: white;
+}
+
+body.dark-mode .qr-generator button:hover {
+    background-color: #008ecc;
+}
+
