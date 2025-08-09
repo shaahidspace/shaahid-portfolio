@@ -12,9 +12,9 @@
         <button id="theme-toggle">🌙 Dark Mode</button>
         <nav>
             <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
-            <a href="/projects" class="{% if request.path == '/projects' %}active{% endif %}">Projects</a>
+            <a href="/projects" class="{% if request.path.startswith('/projects') or request.path.startswith('/qr') %}active{% endif %}">Projects</a>
             <a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a>
-            <a href="/qr" class="{% if request.path == '/qr' %}active{% endif %}">QR Generator</a>
+            <!--<a href="/qr" class="{% if request.path == '/qr' %}active{% endif %}">QR Generator</a>-->
         </nav>
     </header>
     <main>
